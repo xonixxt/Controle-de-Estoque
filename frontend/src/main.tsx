@@ -12,8 +12,8 @@ import './styles/main.scss'
 
     
     const [{ default: App }, { default: store }] = await Promise.all([
-      import('/src/App.tsx'),
-      import('/src/store/index.ts'),
+      import('./App'),
+      import('./store'),
     ])
 
     createRoot(rootEl).render(
