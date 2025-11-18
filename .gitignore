@@ -1,0 +1,70 @@
+# Node
+node_modules/
+npm-debug.log*
+pnpm-lock.yaml
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+coverage/
+.nuxt/
+.next/
+
+# Vite / frontend build
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment
+.env
+.env.*
+.env.local
+.env.development
+.env.production
+
+# Logs
+logs
+*.log
+npm-debug.log*
+.yarn-integrity
+
+# Editors and OS
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.DS_Store
+Thumbs.db
+
+# Misc
+.nyc_output/
+.coverage
+.eslintcache
+*.local
+.sass-cache
+.cache/
+
+# Ignore node_modules anywhere
+**/node_modules/
+
+# Ignore built frontend artifacts
+**/dist/
+**/build/
+
+# Debug
+*.pid
+*.seed
+
+# Secrets in project
+secrets.json
+
+# Optional: ignore product output saved by scripts
+products.json
+

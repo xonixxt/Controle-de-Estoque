@@ -1,0 +1,41 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Vite / frontend build
+dist/
+build/
+.vite/
+
+# Environment
+.env
+.env.*
+.env.local
+.env.development
+.env.production
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+logs
+*.log
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Cache
+.cache/
+.sass-cache
+.eslintcache
+
+# Coverage / test
+coverage/
+
+# Misc
+products.json
+

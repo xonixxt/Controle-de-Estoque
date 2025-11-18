@@ -1,12 +1,17 @@
-import express from 'express';
+import dotenv from 'dotenv';
+import app from './app';
+import { connectDatabase } from './config/database';
+import { ensureAdmin } from './utils/initAdmin';
 
-const app = express();
+dotenv.config();
+
 const port = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-  res.send('Servidor rodando com TypeScript!');
-});
+connectDatabase().then(async () => {
+  // garante que exista um admin antes de iniciar o servidor
+  await ensureAdmin();
 
-app.listen(port, () => {
-  console.log(`Servidor rodando na porta ${port}`);
+  app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
+  });
 });

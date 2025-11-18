@@ -1,0 +1,98 @@
+.app { font-family: Arial, sans-serif; }
+html, body, #root, .app { height: 100%; }
+body { margin: 0; padding: 0; background: linear-gradient(180deg,#f1f5f9 0%, #ffffff 60%);
+	/* user-supplied background (place file as frontend/public/images/bg-stock.webp) */
+	background-image: url('/images/bg-stock.webp');
+	background-repeat: no-repeat;
+	background-position: center right;
+	background-size: cover;
+	background-attachment: fixed;
+}
+/* header: neutral (removed blue stripe) */
+.app header { background: transparent; color: #072146; padding: 12px 20px; display:flex; align-items:center; justify-content:space-between; border-bottom: 1px solid #eee }
+.app header h1 { margin: 0; font-size: 18px; color: #072146 }
+.app header nav a { color: #072146; margin-left: 12px; text-decoration: none }
+.container { max-width: 980px; margin: 20px auto; padding: 12px; background: white; border: 1px solid #eee; border-radius:6px }
+/* when container is used inside .home, remove outer margins/padding so hero fills viewport */
+.home .container { margin: 0 auto; padding: 0 }
+.produtos table { width: 100%; border-collapse: collapse; margin-top: 12px }
+.produtos th, .produtos td { border: 1px solid #eee; padding: 8px; text-align: left }
+.produtos .topbar { display:flex; align-items:center; justify-content:space-between }
+.produtos .topbar h2 { margin: 0 }
+.produtos .novo { display:flex; gap:8px; align-items:center }
+.produtos .novo input { padding:6px 8px; border:1px solid #ddd; border-radius:4px }
+.produtos .novo button { padding:6px 10px; background:#198754; color:white; border:none; border-radius:4px }
+.produtos .topbar .cta { display:inline-flex; align-items:center; gap:8px; padding:8px 12px; background:#0078d4; color:#fff; border-radius:8px; text-decoration:none; box-shadow:0 6px 18px rgba(2,6,23,0.08); font-weight:600 }
+.produtos .topbar .cta svg { opacity:0.95 }
+.produtos .topbar .cta:hover { transform:translateY(-1px); box-shadow:0 10px 30px rgba(2,6,23,0.12) }
+.produtos .topbar .logout { padding:8px 12px; border-radius:8px; border:1px solid #e2e8f0; background:#fff; color:#334155; cursor:pointer; font-weight:600 }
+.produtos .topbar .logout:hover { transform:translateY(-1px); box-shadow:0 6px 18px rgba(2,6,23,0.06) }
+.produtos .actions button { margin-right:6px; padding:6px 8px; border-radius:4px; border:1px solid #ccc; background:#fff }
+.produtos .stock-inline input { width:80px; padding:6px 8px; margin-right:6px }
+.produtos .error { color: #b00; }
+.produtos .name { font-weight:600 }
+.produtos .desc { color:#666; font-size:13px }
+
+/* Login styles - inspired by a clean Microsoft-like card */
+.page-center { display:flex; align-items:center; justify-content:center; min-height:100vh }
+.login-card { width:380px; background:#fff; border-radius:8px; box-shadow:0 6px 20px rgba(0,0,0,0.08); overflow:hidden }
+.login-brand { background:#0078d4; color:white; padding:22px; text-align:left }
+.login-brand .logo { width:48px; height:48px; background:rgba(255,255,255,0.14); display:inline-flex; align-items:center; justify-content:center; border-radius:6px; font-weight:700; margin-bottom:8px }
+.login-brand h1 { margin:6px 0 0; font-size:20px }
+.login-brand .sub { margin:0; font-size:13px; opacity:0.95 }
+.login-form { padding:18px; display:flex; flex-direction:column; gap:8px }
+.login-form label { font-size:13px; color:#333 }
+.login-form input { padding:10px 12px; border:1px solid #ddd; border-radius:6px }
+.login-form .primary { margin-top:6px; padding:10px; background:#0078d4; color:white; border:none; border-radius:6px; cursor:pointer }
+.login-form .primary[disabled] { opacity:0.6 }
+.form-error { background:#fee; color:#900; padding:8px; border-radius:6px; margin-bottom:6px }
+.login-footer { padding:12px 18px; font-size:13px; color:#666 }
+
+/* Home / Hero */
+.home { height:100vh; display:flex; align-items:center; justify-content:center; box-sizing: border-box; padding: 20px }
+.hero-intro { padding:32px; background: linear-gradient(180deg,#f8fbff 0%, #ffffff 100%); border-radius:12px; box-shadow: 0 10px 40px rgba(2,6,23,0.08); display:flex; align-items:center; width:100%; box-sizing:border-box; max-width:920px; max-height:520px; }
+.hero-grid { display:flex; gap:24px; align-items:center; width:100% }
+.hero-col { flex:1 }
+.hero-text { max-width:520px; display:flex; flex-direction:column; justify-content:center; padding:12px 16px }
+.hero h1 { font-size:28px; margin:0 0 12px }
+.lead { font-size:16px; margin-bottom:14px }
+/* make illustration smaller so card looks tighter */
+.hero-illustration svg { max-width:300px; width:100%; height:auto }
+/* compact features to save vertical space */
+.features { display:flex; flex-wrap:wrap; gap:12px }
+.features li { padding:10px 12px }
+.hero h1 { margin:0 0 12px; font-size:30px; color:#072146 }
+.lead { color:#334155; font-size:16px; margin-bottom:14px }
+.features { list-style:none; padding:0; margin:0 0 16px; display:grid; grid-template-columns:1fr 1fr; gap:8px }
+.features li { background:#fff; border:1px solid #eef2ff; padding:8px 10px; border-radius:6px; color:#334155 }
+.hero-actions { display:flex; gap:12px }
+.primary.large { display:inline-block; padding:12px 18px; background:#0078d4; color:white; border-radius:8px; text-decoration:none }
+.outline { padding:10px 14px; border-radius:8px; border:1px solid #cbd5e1; color:#334155; text-decoration:none }
+.outline.large { display:inline-block; padding:12px 18px; }
+.hero-illustration { display:flex; align-items:center; justify-content:center }
+
+/* Novo Produto card styles */
+.novo-produto { width:100% }
+.novo-card { width:100%; max-width:720px; background: #fff; border-radius:12px; box-shadow:0 12px 30px rgba(2,6,23,0.08); padding:24px; box-sizing:border-box }
+.novo-card-header { margin-bottom:12px }
+.novo-card-header h2 { margin:0 0 6px; font-size:20px }
+.novo-card-header .sub { margin:0; color:#64748b }
+.novo-form { display:flex; flex-direction:column; gap:12px }
+.novo-form .row { display:flex; flex-direction:column }
+.novo-form label { font-size:13px; color:#334155; margin-bottom:6px }
+.novo-form input, .novo-form textarea { padding:10px 12px; border:1px solid #e6eefc; border-radius:8px; background:#fbfdff }
+.novo-form textarea { resize:vertical }
+.novo-form .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:12px }
+.actions { display:flex; gap:12px; align-items:center; margin-top:4px }
+.form-success { background:#eef9f6; color:#065f46; padding:8px 10px; border-radius:8px }
+
+@media (max-width: 680px) {
+	.novo-card { padding:16px }
+	.novo-form .grid-2 { grid-template-columns:1fr }
+}
+
+@media (max-width: 880px) {
+	.hero-grid { flex-direction:column-reverse }
+	.features { grid-template-columns:1fr }
+}
+
